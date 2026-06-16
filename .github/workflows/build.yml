@@ -23,6 +23,13 @@ jobs:
         rm -rf ~/theos/sdks
         git clone https://github.com/theos/sdks.git ~/theos/sdks
 
+    - name: Create Tweak File Manually
+      run: |
+        # إنشاء ملف Tweak.x يدوياً لضمان وجوده
+        touch Tweak.x
+        echo '#import <UIKit/UIKit.h>' > Tweak.x
+        # أضف هنا كود الـ Tweak الخاص بك إذا أردت
+
     - name: Compile and Package (.deb)
       run: |
         export THEOS=~/theos

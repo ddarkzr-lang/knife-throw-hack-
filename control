@@ -1,0 +1,9 @@
+Package: com.yourname.knifethrowhack
+Name: Knife Throw Hack
+Depends: mobilesubstrate
+Version: 1.0.0
+Architecture: iphoneos-arm64
+Description: An educational tweak example for hooking functions.
+Maintainer: YourName
+Author: YourName
+Section: Tweaks

@@ -7,3 +7,4 @@ Description: An educational tweak example for hooking functions.
 Maintainer: YourName
 Author: YourName
 Section: Tweaks
+Filter: KnifeThrowHack.plist

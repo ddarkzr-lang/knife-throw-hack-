@@ -1,0 +1,12 @@
+#include <substrate.h>
+
+bool (*old_IsGameOver)(void* instance);
+
+bool new_IsGameOver(void* instance) {
+    return false; 
+}
+
+__attribute__((constructor)) static void initialize() {
+    unsigned long target_offset = 0x12A3B4;
+    MSHookFunction((void*)target_offset, (void*)new_IsGameOver, (void**)&old_IsGameOver);
+}

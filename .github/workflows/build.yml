@@ -17,12 +17,16 @@ jobs:
       run: |
         bash -c "$(curl -fsSL https://raw.githubusercontent.com/theos/theos/master/bin/install-theos)"
         echo "THEOS=~/theos" >> $GITHUB_ENV
-        
+
     - name: Download iOS SDK
       run: |
         rm -rf ~/theos/sdks
         git clone https://github.com/theos/sdks.git ~/theos/sdks
-        
+
+    - name: Move Files to Root
+      run: |
+        cp -r knife-throw-hack-/* . || true
+
     - name: Compile and Package (.deb)
       run: |
         export THEOS=~/theos
